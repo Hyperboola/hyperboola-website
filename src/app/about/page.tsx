@@ -6,41 +6,40 @@ import { ArrowRight, Target, Lightbulb, Users, Zap } from 'lucide-react'
 const values = [
   {
     icon: Lightbulb,
-    title: 'Innovazione',
-    description: 'Non seguiamo le tendenze, le creiamo. Ogni progetto è un\'opportunità per fare qualcosa di nuovo.',
+    title: 'Innovation',
+    description: 'We don\'t follow trends, we create them. Every project is a chance to build something new.',
   },
   {
     icon: Target,
-    title: 'Qualità',
-    description: 'Ogni dettaglio conta. Non rilasciamo nulla che non useremmo noi stessi con orgoglio.',
+    title: 'Quality',
+    description: 'Every detail matters. We never ship anything we wouldn\'t proudly use ourselves.',
   },
   {
     icon: Users,
-    title: 'Persone al Centro',
-    description: 'Creiamo per le persone. L\'utente finale è sempre la nostra priorità numero uno.',
+    title: 'People First',
+    description: 'We build for people. The end user is always our number one priority.',
   },
   {
     icon: Zap,
-    title: 'Agilità',
-    description: 'Struttura snella, decisioni rapide. Ci adattiamo e evolviamo costantemente.',
+    title: 'Agility',
+    description: 'Lean structure, fast decisions. We adapt and evolve constantly.',
   },
 ]
 
 const timeline = [
   {
     year: 'Early 2026',
-    title: 'La Nascita',
-    description: 'Neoorbita viene fondata con una visione chiara: creare prodotti digitali che facciano la differenza.',
+    title: 'The Beginning',
+    description: 'Neoorbita is founded with a clear vision: create digital products that make a difference.',
   },
   {
     year: 'Mid 2026',
-    title: 'Primo Lancio',
-    description: 'Il nostro primo prodotto vede la luce. Un mobile game che segna una nuova orbita.',
+    title: 'First Launch',
+    description: 'Our first product sees the light. A mobile game that marks a new orbit.',
   },
-  // Aggiungi altri milestone in futuro
 ]
 
-export default function ChiSiamo() {
+export default function About() {
   return (
     <>
       {/* Hero */}
@@ -53,11 +52,11 @@ export default function ChiSiamo() {
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">
-              Chi <span className="text-gradient">Siamo</span>
+              About <span className="text-gradient">Us</span>
             </h1>
             <p className="text-xl text-white/60 leading-relaxed">
-              Neoorbita è una software company che crea prodotti digitali innovativi. <br />
-              Dalla nostra orbita, puntiamo alle stelle.
+              Neoorbita is a software company that builds innovative digital products. <br />
+              From our orbit, we aim for the stars.
             </p>
           </div>
         </div>
@@ -70,20 +69,20 @@ export default function ChiSiamo() {
             {/* Text */}
             <div>
               <span className="text-accent-cyan text-sm font-medium uppercase tracking-wider">
-                La Nostra Missione
+                Our Mission
               </span>
               <h2 className="font-display font-bold text-4xl mt-4 mb-6">
-                Trasformare idee in{' '}
-                <span className="text-gradient">esperienze</span>
+                Turning ideas into{' '}
+                <span className="text-gradient">experiences</span>
               </h2>
               <p className="text-white/60 leading-relaxed mb-6">
-                Crediamo che la tecnologia debba essere al servizio delle persone, non il contrario. 
-                Per questo creiamo prodotti che sono intuitivi, belli, e soprattutto utili.
+                We believe technology should serve people, not the other way around. 
+                That&apos;s why we build products that are intuitive, beautiful, and above all useful.
               </p>
               <p className="text-white/60 leading-relaxed">
-                Che si tratti di un gioco che ti fa sorridere, un&apos;app che ti semplifica la vita, 
-                o un&apos;AI che potenzia le tue capacità — ogni nostro prodotto nasce dalla stessa domanda: 
-                &quot;Come possiamo migliorare la vita delle persone?&quot;
+                Whether it&apos;s a game that makes you smile, an app that simplifies your life, 
+                or an AI that amplifies your abilities — every product we build starts with the same question: 
+                &quot;How can we make people&apos;s lives better?&quot;
               </p>
             </div>
 
@@ -120,10 +119,10 @@ export default function ChiSiamo() {
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-accent-purple text-sm font-medium uppercase tracking-wider">
-              I Nostri Valori
+              Our Values
             </span>
             <h2 className="font-display font-bold text-4xl mt-4">
-              Cosa ci <span className="text-gradient">guida</span>
+              What <span className="text-gradient">drives</span> us
             </h2>
           </div>
 
@@ -150,10 +149,10 @@ export default function ChiSiamo() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-accent-pink text-sm font-medium uppercase tracking-wider">
-              Il Nostro Percorso
+              Our Journey
             </span>
             <h2 className="font-display font-bold text-4xl mt-4">
-              La <span className="text-gradient">storia</span> finora
+              The <span className="text-gradient">story</span> so far
             </h2>
           </div>
 
@@ -183,18 +182,18 @@ export default function ChiSiamo() {
       <section className="py-20 relative">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-display font-bold text-3xl mb-4">
-            Vuoi far parte del <span className="text-gradient">viaggio</span>?
+            Want to join the <span className="text-gradient">journey</span>?
           </h2>
           <p className="text-white/50 mb-8">
-            Siamo sempre alla ricerca di persone talentuose e partner visionari.
+            We&apos;re always looking for talented people and visionary partners.
           </p>
           <Link
-            href="/contatti"
+            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full
                        bg-gradient-to-r from-accent-cyan to-accent-purple font-semibold
                        hover:shadow-lg hover:shadow-accent-cyan/25 transition-all duration-300"
           >
-            Contattaci
+            Get in Touch
             <ArrowRight size={18} />
           </Link>
         </div>

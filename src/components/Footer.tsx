@@ -2,19 +2,19 @@ import Link from 'next/link'
 import { Instagram, Twitter, Linkedin, Mail } from 'lucide-react'
 
 const footerLinks = {
-  prodotti: [
-    { label: 'Tutti i Prodotti', href: '/prodotti' },
-    { label: 'Mobile Games', href: '/prodotti#games' },
-    { label: 'App', href: '/prodotti#apps' },
+  products: [
+    { label: 'All Products', href: '/products' },
+    { label: 'Mobile Games', href: '/products#games' },
+    { label: 'Apps', href: '/products#apps' },
   ],
-  azienda: [
-    { label: 'Chi Siamo', href: '/chi-siamo' },
-    { label: 'Contatti', href: '/contatti' },
-    { label: 'Lavora con noi', href: '/contatti' },
+  company: [
+    { label: 'About Us', href: '/about' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'Careers', href: '/contact' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Termini di Servizio', href: '/termini' },
+    { label: 'Terms of Service', href: '/terms' },
   ],
 }
 
@@ -45,8 +45,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-white/50 max-w-xs leading-relaxed">
-              Creiamo prodotti digitali innovativi che plasmano il futuro. 
-              Games, Apps, AI e oltre.
+              Building innovative digital products that shape the future. 
+              Games, Apps, AI and beyond.
             </p>
             {/* Social */}
             <div className="flex gap-4 mt-6">
@@ -66,13 +66,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Prodotti */}
+          {/* Products */}
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-4">
-              Prodotti
+              Products
             </h4>
             <ul className="space-y-3">
-              {footerLinks.prodotti.map((link) => (
+              {footerLinks.products.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -85,13 +85,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Azienda */}
+          {/* Company */}
           <div>
             <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-4">
-              Azienda
+              Company
             </h4>
             <ul className="space-y-3">
-              {footerLinks.azienda.map((link) => (
+              {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -127,10 +127,10 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/30 text-sm">
-            © {new Date().getFullYear()} Neoorbita. Tutti i diritti riservati.
+            © {new Date().getFullYear()} Neoorbita. All rights reserved.
           </p>
           <p className="text-white/30 text-sm">
-            Costruito con 💜 per il futuro
+            Built with 💜 for the future
           </p>
         </div>
       </div>

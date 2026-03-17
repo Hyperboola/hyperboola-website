@@ -13,7 +13,7 @@ const contactMethods = [
   {
     icon: MapPin,
     title: 'Location',
-    value: 'Italia 🇮🇹',
+    value: 'Italy 🇮🇹',
     href: null,
   },
   {
@@ -31,7 +31,7 @@ const socialLinks = [
   //{ icon: Mail, href: 'mailto:hello@neoorbita.com', label: 'Email' },
 ]
 
-export default function Contatti() {
+export default function Contact() {
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -45,14 +45,14 @@ export default function Contatti() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simula invio - sostituisci con la tua logica (es. API route, Formspree, ecc.)
+    // Simulate submission - replace with your logic (e.g. API route, Formspree, etc.)
     await new Promise(resolve => setTimeout(resolve, 1500))
     
     setIsSubmitting(false)
     setIsSubmitted(true)
     setFormState({ name: '', email: '', subject: '', message: '' })
     
-    // Reset success message dopo 5 secondi
+    // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000)
   }
 
@@ -71,11 +71,11 @@ export default function Contatti() {
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">
-              <span className="text-gradient">Parliamone</span>
+              <span className="text-gradient">Let&apos;s Talk</span>
             </h1>
             <p className="text-xl text-white/60 leading-relaxed">
-              Hai un&apos;idea, una domanda, o semplicemente vuoi dire ciao? 
-              Siamo sempre felici di ascoltare.
+              Got an idea, a question, or just want to say hello? 
+              We&apos;re always happy to listen.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Contatti() {
             {/* Contact Info */}
             <div className="lg:col-span-2">
               <h2 className="font-display font-semibold text-2xl mb-8">
-                Come contattarci
+                How to reach us
               </h2>
 
               <div className="space-y-6 mb-12">
@@ -117,7 +117,7 @@ export default function Contatti() {
 
               {/* Social */}
               <div>
-                <h3 className="font-display font-semibold text-lg mb-4">Seguici</h3>
+                <h3 className="font-display font-semibold text-lg mb-4">Follow us</h3>
                 <div className="flex gap-3">
                   {socialLinks.map((social) => (
                     <a
@@ -144,8 +144,8 @@ export default function Contatti() {
                     <div className="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-6">
                       <CheckCircle size={32} className="text-green-400" />
                     </div>
-                    <h3 className="font-display font-semibold text-2xl mb-2">Messaggio inviato!</h3>
-                    <p className="text-white/50">Ti risponderemo il prima possibile.</p>
+                    <h3 className="font-display font-semibold text-2xl mb-2">Message sent!</h3>
+                    <p className="text-white/50">We&apos;ll get back to you as soon as possible.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -153,7 +153,7 @@ export default function Contatti() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-white/70 mb-2">
-                          Nome
+                          Name
                         </label>
                         <input
                           type="text"
@@ -165,7 +165,7 @@ export default function Contatti() {
                           className="w-full px-4 py-3 rounded-xl bg-neo-gray/50 border border-white/10 
                                      focus:border-accent-cyan/50 focus:outline-none focus:ring-1 focus:ring-accent-cyan/50
                                      text-white placeholder-white/30 transition-all duration-300"
-                          placeholder="Il tuo nome"
+                          placeholder="Your name"
                         />
                       </div>
                       <div>
@@ -182,7 +182,7 @@ export default function Contatti() {
                           className="w-full px-4 py-3 rounded-xl bg-neo-gray/50 border border-white/10 
                                      focus:border-accent-cyan/50 focus:outline-none focus:ring-1 focus:ring-accent-cyan/50
                                      text-white placeholder-white/30 transition-all duration-300"
-                          placeholder="la@tua.email"
+                          placeholder="your@email.com"
                         />
                       </div>
                     </div>
@@ -190,7 +190,7 @@ export default function Contatti() {
                     {/* Subject */}
                     <div>
                       <label htmlFor="subject" className="block text-sm font-medium text-white/70 mb-2">
-                        Oggetto
+                        Subject
                       </label>
                       <select
                         id="subject"
@@ -202,20 +202,20 @@ export default function Contatti() {
                                    focus:border-accent-cyan/50 focus:outline-none focus:ring-1 focus:ring-accent-cyan/50
                                    text-white transition-all duration-300"
                       >
-                        <option value="" className="bg-neo-dark">Seleziona un argomento</option>
-                        <option value="general" className="bg-neo-dark">Domanda generale</option>
-                        <option value="business" className="bg-neo-dark">Proposta di business</option>
+                        <option value="" className="bg-neo-dark">Select a topic</option>
+                        <option value="general" className="bg-neo-dark">General inquiry</option>
+                        <option value="business" className="bg-neo-dark">Business proposal</option>
                         <option value="partnership" className="bg-neo-dark">Partnership</option>
-                        <option value="job" className="bg-neo-dark">Opportunità lavorativa</option>
-                        <option value="press" className="bg-neo-dark">Stampa/Media</option>
-                        <option value="other" className="bg-neo-dark">Altro</option>
+                        <option value="job" className="bg-neo-dark">Career opportunity</option>
+                        <option value="press" className="bg-neo-dark">Press / Media</option>
+                        <option value="other" className="bg-neo-dark">Other</option>
                       </select>
                     </div>
 
                     {/* Message */}
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-white/70 mb-2">
-                        Messaggio
+                        Message
                       </label>
                       <textarea
                         id="message"
@@ -227,7 +227,7 @@ export default function Contatti() {
                         className="w-full px-4 py-3 rounded-xl bg-neo-gray/50 border border-white/10 
                                    focus:border-accent-cyan/50 focus:outline-none focus:ring-1 focus:ring-accent-cyan/50
                                    text-white placeholder-white/30 transition-all duration-300 resize-none"
-                        placeholder="Raccontaci tutto..."
+                        placeholder="Tell us everything..."
                       />
                     </div>
 
@@ -243,11 +243,11 @@ export default function Contatti() {
                       {isSubmitting ? (
                         <>
                           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                          Invio in corso...
+                          Sending...
                         </>
                       ) : (
                         <>
-                          Invia Messaggio
+                          Send Message
                           <Send size={18} />
                         </>
                       )}

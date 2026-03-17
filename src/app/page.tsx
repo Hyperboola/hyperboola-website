@@ -1,23 +1,23 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, Sparkles, Rocket, Cpu, Gamepad2, Pen, BrickWall } from 'lucide-react'
+import { ArrowRight, Sparkles, Rocket, Cpu, BrickWall } from 'lucide-react'
 
 const features = [
   {
     icon: Rocket,
     title: 'Development',
-    description: 'App innovative e esperienze di Gioco coinvolgenti per mobile e web.',
+    description: 'Innovative apps and immersive gaming experiences for mobile and web.',
   },
   {
     icon: Cpu,
     title: 'AI',
-    description: 'Soluzioni AI che trasformano il modo di lavorare.',
+    description: 'AI solutions that transform the way you work.',
   },
   {
     icon: BrickWall,
     title: 'Data Engineering',
-    description: 'Infrastrutture e flussi dati robusti per alimentare l\'innovazione.',
+    description: 'Robust infrastructures and data pipelines to fuel innovation.',
   },
 ]
 
@@ -51,7 +51,7 @@ export default function Home() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-fade-in">
             <Sparkles size={16} className="text-accent-cyan" />
-            <span className="text-sm font-medium text-white/80">Nuovo prodotto in arrivo</span>
+            <span className="text-sm font-medium text-white/80">New product coming soon</span>
           </div>
 
           {/* Headline */}
@@ -62,27 +62,27 @@ export default function Home() {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            Games, App, AI e oltre. <br />
-            Trasformiamo idee ambiziose in prodotti che le persone amano.
+            Games, Apps, AI and beyond. <br />
+            We turn ambitious ideas into products people love.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <Link
-              href="/prodotti"
+              href="/products"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full
                          bg-gradient-to-r from-accent-cyan to-accent-purple font-semibold
                          hover:shadow-lg hover:shadow-accent-cyan/25 transition-all duration-300"
             >
-              Esplora i Prodotti
+              Explore Products
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="/chi-siamo"
+              href="/about"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full
                          border-gradient font-semibold hover:glow-purple transition-all duration-300"
             >
-              Chi Siamo
+              About Us
             </Link>
           </div>
         </div>
@@ -102,10 +102,10 @@ export default function Home() {
           {/* Section header */}
           <div className="text-center mb-20">
             <h2 className="font-display font-bold text-4xl md:text-5xl mb-4">
-              Cosa <span className="text-gradient">Creiamo</span>
+              What We <span className="text-gradient">Build</span>
             </h2>
             <p className="text-white/50 text-lg max-w-xl mx-auto">
-              Prodotti diversi, un&apos;unica missione: innovare e creare valore.
+              Different products, one mission: innovate and create value.
             </p>
           </div>
 
@@ -139,7 +139,7 @@ export default function Home() {
                 {/* Arrow */}
                 <div className="relative mt-6 flex items-center gap-2 text-accent-cyan opacity-0 
                                 group-hover:opacity-100 transition-all duration-300">
-                  <span className="text-sm font-medium">Scopri di più</span>
+                  <span className="text-sm font-medium">Learn more</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -158,21 +158,21 @@ export default function Home() {
 
         <div className="relative max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-display font-bold text-4xl md:text-5xl mb-6">
-            Pronto a costruire qualcosa di{' '}
-            <span className="text-gradient">straordinario</span>?
+            Ready to build something{' '}
+            <span className="text-gradient">extraordinary</span>?
           </h2>
           <p className="text-white/50 text-lg mb-10 max-w-xl mx-auto">
-            Che tu sia un investitore, un potenziale partner, o semplicemente curioso, 
-            ci piacerebbe sentirti.
+            Whether you&apos;re an investor, a potential partner, or simply curious — 
+            we&apos;d love to hear from you.
           </p>
           <Link
-            href="/contatti"
+            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full
                        bg-white text-neo-black font-semibold
                        hover:bg-white/90 hover:shadow-lg hover:shadow-white/10 
                        transition-all duration-300"
           >
-            Contattaci
+            Get in Touch
             <ArrowRight size={18} />
           </Link>
         </div>

@@ -9,7 +9,7 @@ const products = [
     id: 'oorbit',
     name: 'OOrbit',
     tagline: 'Coming Soon',
-    description: 'Un\'esperienza di gioco mobile unica che ridefinisce il genere. Preparati per qualcosa di speciale.',
+    description: 'A unique mobile gaming experience that redefines the genre. Get ready for something special.',
     category: 'Mobile Game',
     status: 'coming-soon',
     image: '/products/oorbit-app-icon.png',
@@ -23,8 +23,8 @@ const products = [
 ]
 
 const statusLabels = {
-  'coming-soon': { label: 'In Arrivo', class: 'bg-accent-cyan/20 text-accent-cyan' },
-  'available': { label: 'Disponibile', class: 'bg-green-500/20 text-green-400' },
+  'coming-soon': { label: 'Coming Soon', class: 'bg-accent-cyan/20 text-accent-cyan' },
+  'available': { label: 'Available', class: 'bg-green-500/20 text-green-400' },
   'beta': { label: 'Beta', class: 'bg-accent-purple/20 text-accent-purple' },
 }
 
@@ -46,7 +46,7 @@ const colorClasses = {
   },
 }
 
-export default function Prodotti() {
+export default function Products() {
   return (
     <>
       {/* Hero */}
@@ -57,11 +57,11 @@ export default function Prodotti() {
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">
-              I Nostri <span className="text-gradient">Prodotti</span>
+              Our <span className="text-gradient">Products</span>
             </h1>
             <p className="text-xl text-white/60 leading-relaxed">
-              Ogni prodotto nasce da un&apos;idea semplice: creare qualcosa che le persone ameranno usare. 
-              Ecco cosa stiamo costruendo.
+              Every product starts with a simple idea: build something people will love to use. 
+              Here&apos;s what we&apos;re working on.
             </p>
           </div>
         </div>
@@ -145,7 +145,7 @@ export default function Prodotti() {
                         ) : (
                           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full 
                                           border border-white/10 text-sm text-white/50">
-                            Presto disponibile
+                            Coming soon
                           </div>
                         )}
                         
@@ -156,7 +156,7 @@ export default function Prodotti() {
                                        border border-white/10 hover:border-white/20 
                                        transition-colors text-sm font-medium"
                           >
-                            Sito Web
+                            Website
                             <ExternalLink size={14} />
                           </a>
                         )}
@@ -168,29 +168,29 @@ export default function Prodotti() {
             </div>
           ) : (
             <div className="text-center py-20">
-              <p className="text-white/50 text-lg">Nessun prodotto ancora. Stiamo lavorando!</p>
+              <p className="text-white/50 text-lg">No products yet. We&apos;re working on it!</p>
             </div>
           )}
         </div>
       </section>
 
-      {/* Coming Soon */}
+      {/* Stay Updated */}
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neo-dark/50 to-transparent" />
         
         <div className="relative max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-display font-bold text-3xl mb-4">
-            Resta <span className="text-gradient">Aggiornato</span>
+            Stay <span className="text-gradient">Updated</span>
           </h2>
           <p className="text-white/50 mb-8">
-            Nuovi prodotti in arrivo. Seguici sui social per non perderti nulla.
+            New products on the way. Follow us on social media so you don&apos;t miss a thing.
           </p>
           <Link
-            href="/contatti"
+            href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-gradient 
                        font-medium hover:glow-cyan transition-all duration-300"
           >
-            Contattaci per saperne di più
+            Get in touch to learn more
             <ArrowRight size={18} />
           </Link>
         </div>

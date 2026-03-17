@@ -4,13 +4,13 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Neoorbita | Innovazione Digitale',
-  description: 'Neoorbita - Software company che crea prodotti digitali innovativi: mobile games, applicazioni, intelligenza artificiale e molto altro.',
-  keywords: ['software', 'tech', 'games', 'AI', 'app', 'innovazione', 'Neoorbita'],
+  title: 'Neoorbita | Digital Innovation',
+  description: 'Neoorbita - Software company building innovative digital products: mobile games, applications, artificial intelligence and more.',
+  keywords: ['software', 'tech', 'games', 'AI', 'app', 'innovation', 'Neoorbita'],
   authors: [{ name: 'Neoorbita' }],
   openGraph: {
-    title: 'Neoorbita | Innovazione Digitale',
-    description: 'Creiamo il futuro, un prodotto alla volta.',
+    title: 'Neoorbita | Digital Innovation',
+    description: 'Making the future closer, one product at a time.',
     type: 'website',
   },
 }
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="it">
+    <html lang="en">
       <body className="noise-overlay">
         <Navbar />
         <main className="min-h-screen">

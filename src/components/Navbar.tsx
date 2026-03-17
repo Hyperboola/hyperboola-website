@@ -8,9 +8,9 @@ import NeoOrbitaLogo from '@/components/NeoorbitaLogo'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/prodotti', label: 'Prodotti' },
-  { href: '/chi-siamo', label: 'Chi Siamo' },
-  { href: '/contatti', label: 'Contatti' },
+  { href: '/products', label: 'Products' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -63,12 +63,12 @@ export default function Navbar() {
         {/* CTA Button */}
         <div className="hidden md:block">
           <Link
-            href="/prodotti"
+            href="/products"
             className="px-5 py-2.5 rounded-full border-gradient font-medium text-sm
                        hover:glow-cyan transition-all duration-300
                        bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10"
           >
-            Scarica OOrbit
+            Download OOrbit
           </Link>
         </div>
 
@@ -103,12 +103,12 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/prodotti"
+            href="/products"
             onClick={() => setIsMobileMenuOpen(false)}
             className="block mt-4 px-5 py-3 rounded-full border-gradient text-center font-medium
                        bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10"
           >
-            Scarica OOrbit
+            Download OOrbit
           </Link>
         </div>
       </div>
