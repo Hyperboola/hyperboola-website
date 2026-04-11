@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Palette futuristica NeoOrbita
+        // Palette futuristica Hyperboola
         neo: {
           black: '#0a0a0f',
           dark: '#12121a',

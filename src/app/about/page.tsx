@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Target, Lightbulb, Users, Zap } from 'lucide-react'
 
 const values = [
@@ -30,12 +31,12 @@ const timeline = [
   {
     year: 'Early 2026',
     title: 'The Beginning',
-    description: 'Neoorbita is founded with a clear vision: create digital products that make a difference.',
+    description: 'Hyperboola is founded with a clear vision: create digital products that make a difference.',
   },
   {
     year: 'Mid 2026',
     title: 'First Launch',
-    description: 'Our first product sees the light. A mobile game that marks a new orbit.',
+    description: 'Our first product sees the light. A mobile game that pushes beyond the curve.',
   },
 ]
 
@@ -44,7 +45,6 @@ export default function About() {
     <>
       {/* Hero */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        {/* Background */}
         <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-50" />
         <div className="absolute top-20 left-10 w-72 h-72 bg-accent-cyan/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-20 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl" />
@@ -55,8 +55,8 @@ export default function About() {
               About <span className="text-gradient">Us</span>
             </h1>
             <p className="text-xl text-white/60 leading-relaxed">
-              Neoorbita is a software company that builds innovative digital products. <br />
-              From our orbit, we aim for the stars.
+              Hyperboola is a software company that builds innovative digital products. <br />
+              Beyond the curve, into the future.
             </p>
           </div>
         </div>
@@ -66,7 +66,6 @@ export default function About() {
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Text */}
             <div>
               <span className="text-accent-cyan text-sm font-medium uppercase tracking-wider">
                 Our Mission
@@ -86,25 +85,17 @@ export default function About() {
               </p>
             </div>
 
-            {/* Visual */}
+            {/* Visual — logo mark */}
             <div className="relative">
               <div className="aspect-square rounded-3xl glass p-8 flex items-center justify-center">
-                {/* Orbital animation */}
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent-cyan to-accent-purple glow-cyan" />
-                  </div>
-                  <div className="absolute inset-8 rounded-full border border-accent-cyan/20 animate-orbit" />
-                  <div className="absolute inset-16 rounded-full border border-accent-purple/20 animate-orbit" style={{ animationDirection: 'reverse', animationDuration: '15s' }} />
-                  <div className="absolute inset-24 rounded-full border border-accent-pink/20 animate-orbit" style={{ animationDuration: '20s' }} />
-                  
-                  {/* Orbiting dots */}
-                  <div className="absolute inset-8 animate-orbit">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-accent-cyan" />
-                  </div>
-                  <div className="absolute inset-16 animate-orbit" style={{ animationDirection: 'reverse', animationDuration: '15s' }}>
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-accent-purple" />
-                  </div>
+                <div className="relative w-3/4 h-3/4 flex items-center justify-center">
+                  <Image
+                    src="/logo-noback.png"
+                    alt="Hyperboola"
+                    width={512}
+                    height={512}
+                    className="animate-pulse-glow"
+                  />
                 </div>
               </div>
             </div>
@@ -127,7 +118,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
+            {values.map((value) => (
               <div
                 key={value.title}
                 className="p-6 rounded-2xl glass hover:bg-neo-gray/50 transition-all duration-300"
@@ -157,17 +148,12 @@ export default function About() {
           </div>
 
           <div className="relative">
-            {/* Line */}
             <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-accent-cyan via-accent-purple to-transparent" />
             
-            {/* Events */}
             <div className="space-y-12">
-              {timeline.map((event, index) => (
+              {timeline.map((event) => (
                 <div key={event.year} className="relative pl-20">
-                  {/* Dot */}
                   <div className="absolute left-6 top-1 w-5 h-5 rounded-full border-2 border-accent-cyan bg-neo-black" />
-                  
-                  {/* Content */}
                   <span className="text-accent-cyan font-mono text-sm">{event.year}</span>
                   <h3 className="font-display font-semibold text-xl mt-1 mb-2">{event.title}</h3>
                   <p className="text-white/50 leading-relaxed">{event.description}</p>

@@ -7,8 +7,8 @@ const contactMethods = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'hello@neoorbita.com',
-    href: 'mailto:hello@neoorbita.com',
+    value: 'hello@hyperboola.com',
+    href: 'mailto:hello@hyperboola.com',
   },
   {
     icon: MapPin,
@@ -19,16 +19,16 @@ const contactMethods = [
   {
     icon: MessageSquare,
     title: 'Social',
-    value: '@neoorbita',
-    href: 'https://twitter.com/neoorbita',
+    value: '@hyperboola',
+    href: 'https://twitter.com/hyperboola',
   },
 ]
 
 const socialLinks = [
-  { icon: Instagram, href: 'https://instagram.com/neoorbita', label: 'Instagram' },
-  { icon: Twitter, href: 'https://twitter.com/neoorbita', label: 'X' },
-  { icon: Linkedin, href: 'https://linkedin.com/company/neoorbita', label: 'LinkedIn' },
-  //{ icon: Mail, href: 'mailto:hello@neoorbita.com', label: 'Email' },
+  { icon: Instagram, href: 'https://instagram.com/hyperboola', label: 'Instagram' },
+  { icon: Twitter, href: 'https://twitter.com/hyperboola', label: 'X' },
+  { icon: Linkedin, href: 'https://linkedin.com/company/hyperboola', label: 'LinkedIn' },
+  //{ icon: Mail, href: 'mailto:hello@hyperboola.com', label: 'Email' },
 ]
 
 export default function Contact() {

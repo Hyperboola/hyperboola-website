@@ -4,13 +4,13 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Neoorbita | Digital Innovation',
-  description: 'Neoorbita - Software company building innovative digital products: mobile games, applications, artificial intelligence and more.',
-  keywords: ['software', 'tech', 'games', 'AI', 'app', 'innovation', 'Neoorbita'],
-  authors: [{ name: 'Neoorbita' }],
+  title: 'Hyperboola | Digital Innovation',
+  description: 'Hyperboola - Software company building innovative digital products: mobile games, applications, artificial intelligence and more.',
+  keywords: ['software', 'tech', 'games', 'AI', 'app', 'innovation', 'Hyperboola'],
+  authors: [{ name: 'Hyperboola' }],
   openGraph: {
-    title: 'Neoorbita | Digital Innovation',
-    description: 'Making the future closer, one product at a time.',
+    title: 'Hyperboola | Digital Innovation',
+    description: 'Beyond the curve, into the future.',
     type: 'website',
   },
 }

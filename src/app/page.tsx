@@ -39,11 +39,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-neo-black/50 to-neo-black" />
         </div>
 
-        {/* Orbiting elements */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-20">
-          <div className="absolute inset-0 rounded-full border border-accent-cyan/30 animate-orbit" />
-          <div className="absolute inset-8 rounded-full border border-accent-purple/30 animate-orbit" style={{ animationDirection: 'reverse', animationDuration: '25s' }} />
-          <div className="absolute inset-16 rounded-full border border-accent-pink/30 animate-orbit" style={{ animationDuration: '30s' }} />
+        {/* Hyperbola background decoration */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-15">
+          <svg viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <path d="M 50 50 C 180 200, 240 270, 280 300 C 240 330, 180 400, 50 550" stroke="rgba(0,240,255,0.4)" strokeWidth="1.5" fill="none" />
+            <path d="M 550 50 C 420 200, 360 270, 320 300 C 360 330, 420 400, 550 550" stroke="rgba(168,85,247,0.4)" strokeWidth="1.5" fill="none" />
+            <path d="M 80 30 C 200 190, 255 265, 290 300 C 255 335, 200 410, 80 570" stroke="rgba(0,240,255,0.2)" strokeWidth="1" fill="none" />
+            <path d="M 520 30 C 400 190, 345 265, 310 300 C 345 335, 400 410, 520 570" stroke="rgba(168,85,247,0.2)" strokeWidth="1" fill="none" />
+          </svg>
         </div>
 
         {/* Content */}
@@ -56,8 +59,8 @@ export default function Home() {
 
           {/* Headline */}
           <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-tight mb-6 animate-slide-up">
-            Orbiting The{' '}
-            <span className="text-gradient">Future</span>
+            Beyond The{' '}
+            <span className="text-gradient">Curve</span>
           </h1>
 
           {/* Subheadline */}

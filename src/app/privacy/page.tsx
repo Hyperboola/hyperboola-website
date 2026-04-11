@@ -6,9 +6,9 @@ import { ArrowLeft, Shield } from 'lucide-react'
 export default function Privacy() {
   const lastUpdated = 'March 17, 2026'
   
-  const companyName = 'NeoOrbita'
-  const contactEmail = 'privacy@neoorbita.com'
-  const websiteUrl = 'https://neoorbita.com'
+  const companyName = 'Hyperboola'
+  const contactEmail = 'privacy@hyperboola.com'
+  const websiteUrl = 'https://hyperboola.com'
 
   return (
     <>

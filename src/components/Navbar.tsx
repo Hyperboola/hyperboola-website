@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
-import NeoOrbitaLogo from '@/components/NeoorbitaLogo'
+import HyperboolaLogo from '@/components/HyperboolaLogo'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -35,12 +35,10 @@ export default function Navbar() {
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="group">
-          <NeoOrbitaLogo size="sm" />
+          <HyperboolaLogo size="sm" />
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -60,7 +58,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA Button */}
         <div className="hidden md:block">
           <Link
             href="/products"
@@ -72,7 +69,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden p-2 text-white/80 hover:text-white transition-colors"
@@ -81,7 +77,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       <div
         className={`md:hidden absolute top-full left-0 right-0 mt-2 mx-3 bg-neo-dark border border-white/10 rounded-2xl shadow-xl shadow-black/30 transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
