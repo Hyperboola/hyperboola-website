@@ -8,14 +8,14 @@ const products = [
   {
     id: 'oorbit',
     name: 'OOrbit',
-    tagline: 'Coming Soon',
+    tagline: 'Get it',
     description: 'A unique mobile gaming experience that redefines the genre. Get ready for something special.',
     category: 'Mobile Game',
-    status: 'coming-soon',
+    status: 'available',
     image: '/products/oorbit-app-icon.png',
     color: 'cyan',
     links: {
-      appStore: '#',
+      appStore: 'https://apps.apple.com/it/app/oorbit/id6769432773',
       playStore: '#',
       website: '#',
     },
