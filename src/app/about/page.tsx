@@ -1,187 +1,98 @@
-'use client'
-
 import Link from 'next/link'
-import Image from 'next/image'
-import { ArrowRight, Target, Lightbulb, Users, Zap } from 'lucide-react'
+import { FileText, Github, Linkedin } from 'lucide-react'
+import { SITE } from '@/lib/site'
 
-const values = [
-  {
-    icon: Lightbulb,
-    title: 'Innovation',
-    description: 'We don\'t follow trends, we create them. Every project is a chance to build something new.',
-  },
-  {
-    icon: Target,
-    title: 'Quality',
-    description: 'Every detail matters. We never ship anything we wouldn\'t proudly use ourselves.',
-  },
-  {
-    icon: Users,
-    title: 'People First',
-    description: 'We build for people. The end user is always our number one priority.',
-  },
-  {
-    icon: Zap,
-    title: 'Agility',
-    description: 'Lean structure, fast decisions. We adapt and evolve constantly.',
-  },
-]
+export const metadata = {
+  title: 'About | Hyperboola',
+  description: 'Michele Tarantino, senior data engineer in Milan, and the independent projects behind Hyperboola.',
+}
 
-const timeline = [
-  {
-    year: 'Early 2026',
-    title: 'The Beginning',
-    description: 'Hyperboola is founded with a clear vision: create digital products that make a difference.',
-  },
-  {
-    year: 'Mid 2026',
-    title: 'First Launch',
-    description: 'Our first product sees the light. A mobile game that pushes beyond the curve.',
-  },
+const skills = [
+  ['Data platform', 'Databricks, Delta Lake, Unity Catalog, Delta Live Tables, Workflows, Asset Bundles'],
+  ['Processing', 'Apache Spark (PySpark), Python, SQL'],
+  ['Cloud', 'Azure Data Factory, Data Lake Storage, Synapse, Key Vault'],
+  ['Practices', 'ETL/ELT, Medallion architecture, CI/CD, Git, data quality and governance'],
+  ['Side projects', 'Flutter/Dart, React / Next.js, Vercel'],
 ]
 
 export default function About() {
   return (
     <>
-      {/* Hero */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-50" />
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent-cyan/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-20 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl" />
-        
-        <div className="relative max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="font-display font-bold text-5xl md:text-6xl mb-6">
-              About <span className="text-gradient">Us</span>
-            </h1>
-            <p className="text-xl text-white/60 leading-relaxed">
-              Hyperboola is a software company that builds innovative digital products. <br />
-              Beyond the curve, into the future.
+      <section className="pt-36 pb-10 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-60" />
+        <div className="relative max-w-4xl mx-auto px-6">
+          <p className="text-accent-cyan font-mono text-sm mb-4">About</p>
+          <h1 className="font-display font-bold text-4xl md:text-5xl mb-6">Hi, I&apos;m Michele.</h1>
+          <div className="space-y-4 text-lg text-white/65 leading-relaxed">
+            <p>
+              I&apos;m a senior data engineer based in Milan. I started in 2020 as an intern and have worked on Azure and,
+              since 2023, Databricks projects: ETL/ELT pipelines, Lakehouse architecture, governance with Unity Catalog and
+              automated deployment. I&apos;m Databricks Certified Data Engineer Associate.
+            </p>
+            <p>
+              Hyperboola is the name I use for my independent projects. It is not a company: it&apos;s where I build
+              things on my own, like Aperidata and the game OOrbit, to learn by shipping and to keep my skills sharp
+              outside of client work.
+            </p>
+            <p>
+              The code is public on GitHub. I use AI tools as part of my workflow, and I&apos;m happy to walk through
+              the architecture and the decisions behind any of these projects.
             </p>
           </div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-accent-cyan text-sm font-medium uppercase tracking-wider">
-                Our Mission
-              </span>
-              <h2 className="font-display font-bold text-4xl mt-4 mb-6">
-                Turning ideas into{' '}
-                <span className="text-gradient">experiences</span>
-              </h2>
-              <p className="text-white/60 leading-relaxed mb-6">
-                We believe technology should serve people, not the other way around. 
-                That&apos;s why we build products that are intuitive, beautiful, and above all useful.
-              </p>
-              <p className="text-white/60 leading-relaxed">
-                Whether it&apos;s a game that makes you smile, an app that simplifies your life, 
-                or an AI that amplifies your abilities — every product we build starts with the same question: 
-                &quot;How can we make people&apos;s lives better?&quot;
-              </p>
-            </div>
-
-            {/* Visual — logo mark */}
-            <div className="relative">
-              <div className="aspect-square rounded-3xl glass p-8 flex items-center justify-center">
-                <div className="relative w-3/4 h-3/4 flex items-center justify-center">
-                  <Image
-                    src="/logo-noback.png"
-                    alt="Hyperboola"
-                    width={512}
-                    height={512}
-                    className="animate-pulse-glow"
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-wrap gap-3 mt-8">
+            <a
+              href={SITE.cv}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-neo-black font-semibold hover:bg-white/90 transition-colors"
+            >
+              <FileText size={18} /> Download CV
+            </a>
+            <a
+              href={SITE.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/15 hover:border-white/30 transition-colors font-medium"
+            >
+              <Linkedin size={18} /> LinkedIn
+            </a>
+            <a
+              href={SITE.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/15 hover:border-white/30 transition-colors font-medium"
+            >
+              <Github size={18} /> GitHub
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Values */}
-      <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neo-dark/30 to-transparent" />
-        
-        <div className="relative max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-accent-purple text-sm font-medium uppercase tracking-wider">
-              Our Values
-            </span>
-            <h2 className="font-display font-bold text-4xl mt-4">
-              What <span className="text-gradient">drives</span> us
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value) => (
-              <div
-                key={value.title}
-                className="p-6 rounded-2xl glass hover:bg-neo-gray/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-cyan/20 to-accent-purple/20 
-                                flex items-center justify-center mb-4">
-                  <value.icon size={24} className="text-accent-cyan" />
-                </div>
-                <h3 className="font-display font-semibold text-lg mb-2">{value.title}</h3>
-                <p className="text-white/50 text-sm leading-relaxed">{value.description}</p>
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="font-display font-semibold text-2xl mb-6">Skills</h2>
+          <dl className="rounded-2xl glass divide-y divide-white/5">
+            {skills.map(([k, v]) => (
+              <div key={k} className="px-6 py-4 grid grid-cols-1 sm:grid-cols-[160px,1fr] gap-1 sm:gap-6">
+                <dt className="text-white/40 text-sm">{k}</dt>
+                <dd className="text-white/80">{v}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 relative">
+      <section className="pb-28">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-accent-pink text-sm font-medium uppercase tracking-wider">
-              Our Journey
-            </span>
-            <h2 className="font-display font-bold text-4xl mt-4">
-              The <span className="text-gradient">story</span> so far
-            </h2>
+          <h2 className="font-display font-semibold text-2xl mb-6">Projects</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/data" className="rounded-xl glass p-5 hover:border-white/20 transition-colors">
+              <h3 className="font-display font-semibold mb-1">Aperidata</h3>
+              <p className="text-white/55 text-sm">ISTAT data pipeline in Python: validation, charts and video.</p>
+            </Link>
+            <Link href="/products" className="rounded-xl glass p-5 hover:border-white/20 transition-colors">
+              <h3 className="font-display font-semibold mb-1">OOrbit</h3>
+              <p className="text-white/55 text-sm">Mobile game in Flutter, on the App Store.</p>
+            </Link>
           </div>
-
-          <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-accent-cyan via-accent-purple to-transparent" />
-            
-            <div className="space-y-12">
-              {timeline.map((event) => (
-                <div key={event.year} className="relative pl-20">
-                  <div className="absolute left-6 top-1 w-5 h-5 rounded-full border-2 border-accent-cyan bg-neo-black" />
-                  <span className="text-accent-cyan font-mono text-sm">{event.year}</span>
-                  <h3 className="font-display font-semibold text-xl mt-1 mb-2">{event.title}</h3>
-                  <p className="text-white/50 leading-relaxed">{event.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 relative">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-display font-bold text-3xl mb-4">
-            Want to join the <span className="text-gradient">journey</span>?
-          </h2>
-          <p className="text-white/50 mb-8">
-            We&apos;re always looking for talented people and visionary partners.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full
-                       bg-gradient-to-r from-accent-cyan to-accent-purple font-semibold
-                       hover:shadow-lg hover:shadow-accent-cyan/25 transition-all duration-300"
-          >
-            Get in Touch
-            <ArrowRight size={18} />
-          </Link>
         </div>
       </section>
     </>

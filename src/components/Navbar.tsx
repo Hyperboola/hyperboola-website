@@ -5,10 +5,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 import HyperboolaLogo from '@/components/HyperboolaLogo'
+import { SITE } from '@/lib/site'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/products', label: 'Products' },
+  { href: '/data', label: 'Aperidata' },
+  { href: '/products', label: 'OOrbit' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ]
@@ -59,14 +61,12 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <Link
-            href="/products"
-            className="px-5 py-2.5 rounded-full border-gradient font-medium text-sm
-                       hover:glow-cyan transition-all duration-300
-                       bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10"
+          <a
+            href={SITE.cv}
+            className="px-5 py-2.5 rounded-full border border-white/15 hover:border-white/30 font-medium text-sm transition-colors"
           >
-            Download OOrbit
-          </Link>
+            Download CV
+          </a>
         </div>
 
         <button
@@ -97,14 +97,13 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/products"
+          <a
+            href={SITE.cv}
             onClick={() => setIsMobileMenuOpen(false)}
-            className="block mt-4 px-5 py-3 rounded-full border-gradient text-center font-medium
-                       bg-gradient-to-r from-accent-cyan/10 to-accent-purple/10"
+            className="block mt-4 px-5 py-3 rounded-full border border-white/15 text-center font-medium"
           >
-            Download OOrbit
-          </Link>
+            Download CV
+          </a>
         </div>
       </div>
     </header>

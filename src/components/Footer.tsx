@@ -1,17 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Instagram, Twitter, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
+import { SITE } from '@/lib/site'
 
 const footerLinks = {
-  products: [
-    { label: 'All Products', href: '/products' },
-    { label: 'Mobile Games', href: '/products#games' },
-    { label: 'Apps', href: '/products#apps' },
+  projects: [
+    { label: 'Aperidata', href: '/data' },
+    { label: 'OOrbit', href: '/products' },
   ],
-  company: [
-    { label: 'About Us', href: '/about' },
+  me: [
+    { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' },
-    { label: 'Careers', href: '/contact' },
   ],
   legal: [
     { label: 'Privacy Policy', href: '/privacy' },
@@ -20,45 +19,33 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { icon: Instagram, href: 'https://instagram.com/hyperboola', label: 'Instagram' },
-  { icon: Twitter, href: 'https://twitter.com/hyperboola', label: 'X' },
-  { icon: Linkedin, href: 'https://linkedin.com/company/hyperboola', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:hello@hyperboola.com', label: 'Email' },
+  { icon: Github, href: SITE.github, label: 'GitHub' },
+  { icon: Linkedin, href: SITE.linkedin, label: 'LinkedIn' },
+  { icon: Mail, href: `mailto:${SITE.email}`, label: 'Email' },
 ]
 
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/5">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-accent-cyan/50 to-transparent" />
-      
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-          <div className="lg:col-span-2">
+      <div className="max-w-5xl mx-auto px-6 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+          <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-4">
-              <Image
-                src="/logo-noback.png"
-                alt="Hyperboola"
-                width={32}
-                height={32}
-                className="shrink-0"
-              />
+              <Image src="/logo-noback.png" alt="Hyperboola" width={32} height={32} className="shrink-0" />
               <span className="font-display font-bold text-xl">
                 Hyper<span className="text-gradient">boola</span>
               </span>
             </Link>
-            <p className="text-white/50 max-w-xs leading-relaxed">
-              Building innovative digital products that shape the future. 
-              Games, Apps, AI and beyond.
+            <p className="text-white/50 max-w-xs leading-relaxed text-sm">
+              Independent projects by Michele Tarantino, senior data engineer in Milan.
             </p>
-            <div className="flex gap-4 mt-6">
+            <div className="flex gap-3 mt-5">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/50 
-                             hover:text-accent-cyan transition-all duration-300"
+                  {...(social.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/50 hover:text-accent-cyan transition-colors"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -67,43 +54,25 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-4">Products</h4>
-            <ul className="space-y-3">
-              {footerLinks.products.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-white/50 hover:text-white transition-colors duration-300 text-sm">{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-4">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-white/50 hover:text-white transition-colors duration-300 text-sm">{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-4">Legal</h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-white/50 hover:text-white transition-colors duration-300 text-sm">{link.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {([['Projects', footerLinks.projects], ['Me', footerLinks.me], ['Legal', footerLinks.legal]] as const)
+            .map(([title, links]) => (
+              <div key={title}>
+                <h4 className="font-display font-semibold text-sm uppercase tracking-wider text-white/80 mb-4">{title}</h4>
+                <ul className="space-y-3">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <Link href={link.href} className="text-white/50 hover:text-white transition-colors text-sm">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/30 text-sm">© {new Date().getFullYear()} Hyperboola. All rights reserved.</p>
-          <p className="text-white/30 text-sm">Built with 💜 for the future</p>
+        <div className="mt-12 pt-6 border-t border-white/5">
+          <p className="text-white/30 text-sm">© {new Date().getFullYear()} Hyperboola · Michele Tarantino</p>
         </div>
       </div>
     </footer>

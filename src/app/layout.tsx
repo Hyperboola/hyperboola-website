@@ -4,14 +4,16 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Hyperboola | Digital Innovation',
-  description: 'Hyperboola - Software company building innovative digital products: mobile games, applications, artificial intelligence and more.',
-  keywords: ['software', 'tech', 'games', 'AI', 'app', 'innovation', 'Hyperboola'],
-  authors: [{ name: 'Hyperboola' }],
+  metadataBase: new URL('https://hyperboola.com'),
+  title: 'Michele Tarantino | Senior Data Engineer & indie projects',
+  description:
+    'Senior data engineer in Milan. Personal projects: Aperidata, a Python pipeline for ISTAT data, and OOrbit, a mobile game built with Flutter.',
+  authors: [{ name: 'Michele Tarantino' }],
   openGraph: {
-    title: 'Hyperboola | Digital Innovation',
-    description: 'Beyond the curve, into the future.',
+    title: 'Michele Tarantino | Senior Data Engineer & indie projects',
+    description: 'Aperidata (ISTAT data pipeline) and OOrbit (mobile game).',
     type: 'website',
+    url: 'https://hyperboola.com',
   },
 }
 
